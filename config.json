@@ -1,0 +1,44 @@
+{
+    "data_dir": "data/audio/gtzan",
+    "lyrics_dir": "data/lyrics",
+    "cache_dir": "data/cache",
+    "output_dir": "outputs",
+    "audio": {
+        "sample_rate": 22050,
+        "n_mfcc": 20,
+        "n_mels": 128
+    },
+    "whisper": {
+        "model_size": "base",
+        "force_retranscribe": false
+    },
+    "embedding": {
+        "model_name": "all-MiniLM-L6-v2"
+    },
+    "vae": {
+        "latent_dim": 256,
+        "hidden_dims": [
+            1024,
+            512,
+            256
+        ],
+        "dropout": 0.1,
+        "beta": 0.3,
+        "learning_rate": 0.0003,
+        "batch_size": 64,
+        "epochs": 50,
+        "val_split": 0.2
+    },
+    "clustering": {
+        "n_clusters": 10,
+        "pca_components": 100,
+        "kmeans_n_init": 50,
+        "kmeans_max_iter": 500,
+        "dbscan_min_samples": 3,
+        "dbscan_eps_percentile": 75,
+        "include_dbscan": true,
+        "include_spectral": true,
+        "include_autoencoder": true
+    },
+    "random_state": 42
+}
